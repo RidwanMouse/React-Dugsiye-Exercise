@@ -1,0 +1,221 @@
+.app {
+  min-height: 100vh;
+  background: #eeeeff;
+  color: #202938;
+}
+
+.navbar {
+  height: 72px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.navButton,
+.activeNav {
+  border: none;
+  background: transparent;
+
+  font-size: 16px;
+  color: #374151;
+
+  padding: 11px 20px;
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+.activeNav {
+  background: #f0e4ff;
+  color: #8b12e8;
+}
+
+
+.main {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 32px;
+}
+
+
+.todoCard {
+  width: 400px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 32px;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.todoCard h1 {
+  text-align: center;
+
+  margin: 0 0 32px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #202938;
+}
+
+
+.inputArea {
+  display: flex;
+  gap: 8px;
+
+  margin-bottom: 24px;
+}
+
+.inputArea input {
+  flex: 1;
+
+  height: 42px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  padding: 0 16px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.inputArea input:focus {
+  border-color: #9810e8;
+  box-shadow: 0 0 0 2px rgba(152, 16, 232, 0.1);
+}
+
+.addButton {
+  height: 42px;
+
+  padding: 0 23px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #9810e8;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.addButton:hover {
+  background: #7f0bc4;
+}
+
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todoItem {
+  min-height: 56px;
+
+  background: #f8fafc;
+
+  border-radius: 9px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.todoLeft input {
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+}
+
+.todoLeft span {
+  font-size: 16px;
+  color: #374151;
+
+  word-break: break-word;
+}
+
+
+.completed span {
+  color: #9ca3af;
+
+  text-decoration: line-through;
+}
+
+.completed {
+  background: #f3f4f6;
+}
+
+
+
+.deleteButton {
+  border: none;
+  background: transparent;
+
+  color: #dc2626;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  padding: 5px;
+}
+
+.deleteButton:hover {
+  color: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .todoCard {
+    width: calc(100% - 32px);
+
+    padding: 24px;
+  }
+
+  .main {
+    padding-top: 20px;
+  }
+
+  .todoCard h1 {
+    font-size: 26px;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .inputArea {
+    flex-direction: column;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+}
